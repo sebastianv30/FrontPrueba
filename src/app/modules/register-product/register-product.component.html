@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Producto</title>
+</head>
+
+<body>
+
+    <div class="registerProduct">
+        <div>
+            <mat-toolbar>
+                <span>Nexos | Nuevo Producto</span>
+                <span class="example-spacer"></span>
+                <mat-icon id="close-icon" fxFlex (click)="closeDialog()" fxLayoutAlign="end end">close</mat-icon>
+            </mat-toolbar>
+        </div>
+        <br>
+        <form class="form" [formGroup]="registerForm" (ngSubmit)="createProduct(); myForm.resetForm()" #myForm="ngForm">
+            <span style="text-align: center; font-size: 18px;">Registra Nuevo Producto</span>
+            <input class="input" type="text" placeholder="Nombre" formControlName="name">
+            <input class="input" type="number" min="0" placeholder="Cantidad" formControlName="quantity">
+            <input class="input" type="date" [max]=findDate() placeholder="admission_date" formControlName="date">
+
+            <br>
+            <br>
+
+            <div class="containerButtons">
+                <button type="btn btn-primary" mat-icon-button type="submit" class="Buttons">Guardar</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>

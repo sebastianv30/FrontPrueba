@@ -1,0 +1,26 @@
+<div class="updateProduct">
+    <div>
+        <mat-toolbar>
+            <span>Nexos | Actualizar Producto </span>
+            <span class="example-spacer"></span>
+            <mat-icon id="close-icon" fxFlex (click)="closeDialog()" fxLayoutAlign="end end">close</mat-icon>
+        </mat-toolbar>
+    </div>
+
+
+    <form class="form" [formGroup]="updateProductForm" (ngSubmit)="updateProduct(); myForm.resetForm()"
+        #myForm="ngForm">
+        <label>Nombre:</label>
+        <input class="input" type="text" placeholder="Nombre" formControlName="name">
+        <label>Cantidad:</label>
+        <input class="input" type="number" min="0" placeholder="Cantidad" formControlName="quantity">
+        <label>Fecha de Ingreso:</label>
+        <input class="input" type="date" [max]=findDate() formControlName="date">
+        <br>
+
+        <div class="containerButtons">
+            <button mat-icon-button class="Buttons">Actualizar</button>
+        </div>
+    </form>
+
+</div>

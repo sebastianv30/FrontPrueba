@@ -1,0 +1,33 @@
+<div>
+    <div class="selectUser">
+        <mat-toolbar>
+            <span>Seleccionar Usuario</span>
+            <span class="example-spacer"></span>
+        </mat-toolbar>
+    </div>
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Nombre</th>
+                    <th>Edad</th>
+                    <th>Cargo</th>
+                    <th>Fecha Ingreso</th>
+                    <th>Acción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let doc of dataSource; let i = index;">
+                    <td>{{i+1}}</td>
+                    <td>{{doc.nombreUsuario}}</td>
+                    <td>{{doc.edad}}</td>
+                    <td>{{doc.cargo.nombreCargo}}</td>
+                    <td>{{doc.fechaIngreso}}</td>
+                    <td>
+                        <button class=Buttons (click)="changeUser(doc)"><mat-icon>check_circle</mat-icon></button>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

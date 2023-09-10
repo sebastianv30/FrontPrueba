@@ -1,0 +1,105 @@
+mat-toolbar{
+    text-align: center;
+    color: aliceblue;
+    background: hsl(245, 86%, 14%);
+  }
+  table {
+    text-align: center;
+    width: 90%;
+  }
+  .example-spacer {
+    flex: 1 1 auto;
+  }
+  .example-icon{
+    background:rgb(197, 117, 27);
+    border-radius: 5px;
+    border: none;
+    color: #fbfbfb;
+    padding: 10px 22px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 5px;
+  }
+  .Buttons{
+    background:rgb(0, 125, 25);
+    border-radius: 8px;
+    border: none;
+    color: aliceblue;
+    padding: 10px 22px;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 5px;
+  }
+  .Buttons2{
+    background:rgb(68, 54, 227);
+    border-radius: 8px;
+    border: none;
+    color: aliceblue;
+    padding: 10px 22px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 5px;
+  }
+  .Buttons3{
+    background: #df0808;
+    border-radius: 8px;
+    border: none;
+    color: aliceblue;
+    padding: 10px 22px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 5px;
+  }
+  table {
+    border-collapse: collapse;
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  table td {
+    padding: 3px;
+  }
+  table thead td {
+    background-color: #54585d;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 13px;
+    border: 1px solid #54585d;
+  }
+  table tbody td {
+    color: #636363;
+    border: 1px solid #dddfe1;
+  }
+  table tbody tr {
+    background-color: #f9fafb;
+  }
+  table tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+  }
+  .modal-body {
+    text-align: center;
+}
+
+.modal-title {
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 30px;
+    letter-spacing: -0.02em;
+    color: #162238;
+}
+  .modulescreate {
+    background-color: #208d0b;
+    border: none;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-size: 14px;
+    width: 20%;
+    height: 40px;
+    margin-left: 30px;
+    margin-right: 40px;
+    border-radius: 30px;
+}

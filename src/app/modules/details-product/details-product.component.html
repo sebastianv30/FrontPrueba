@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="detailProduct">
+        <div>
+            <mat-toolbar>
+                <span>Informacion del Producto</span>
+                <span class="example-spacer"></span>
+                <mat-icon id="close-icon" fxFlex (click)="closeDialog()" fxLayoutAlign="end end">close</mat-icon>
+            </mat-toolbar>
+        </div>
+        <form class="form" [formGroup]="detailProductForm" #myForm="ngForm">
+            <label>Nombre:</label><br>
+            <input class="input" type="text" placeholder="Nombre" formControlName="name"><br>
+            <label>Cantidad:</label><br>
+            <input class="input" type="number" min="0" placeholder="Cantidad" formControlName="quantity"><br>
+            <label>Fecha de Ingreso:</label><br>
+            <input class="input" type="date" [max]=findDate() formControlName="date"><br>
+            <br>
+        </form>
+        <br>
+        <h2>Historial de Cambios</h2>
+        <div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Usuario</th>
+                        <th>Fecha</th>
+                        <th>Acción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let doc of dataSource; let i = index;">
+                        <td>{{i+1}}</td>
+                        <td>{{doc.personaModifico}}</td>
+                        <td>{{doc.actualizado}}</td>
+                        <td>{{doc.accion}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

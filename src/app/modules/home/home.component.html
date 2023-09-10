@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nexos | Gestión Mercancia</title>
+</head>
+
+<body>
+
+  <div align="center">
+    <mat-toolbar>
+      <img src="../../../assets/nexos.png" [width]="100">
+      <span style="margin-left: 20px;">| Sistema de Mercancías </span>
+      <span class="example-spacer"></span>
+      <button mat-icon-button class="example-icon favorite-icon" (click)="openDialogSelect()"><i
+          class="fa-solid fa-user"></i>Seleccionar
+        Usuario</button>
+      <div *ngIf="nameUser">
+        <img src="../../../assets/trabajando.png" width="40" alt=""><h3>{{nameUser}}</h3>
+      </div>
+    </mat-toolbar>
+
+    <br>
+    <br>
+
+    <div>
+      <button mat-icon-button class="Buttons" (click)="openDialogProduct()">Nuevo Producto</button><br>
+      <br>
+      <div>
+        <h2>Buscar por: Nombre de Producto | Usuario</h2>
+        <input class="search-input" [(ngModel)]="filterText" (keyup)="applyFilter()" placeholder="Buscar">
+
+      </div>
+      
+    </div>
+    <br>
+    <br>
+    <table>
+      <thead>
+        <tr>
+          <th>No</th>
+          <th>Nombre</th>
+          <th>Cantidad</th>
+          <th>Fecha de Ingreso</th>
+          <th>Usuario</th>
+          <th>Acción</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of dataSource; let i = index;">
+          <td>{{i+1}}</td>
+          <td>{{item.nombreProducto}}</td>
+          <td>{{item.cantidad}}</td>
+          <td>{{item.fechaIngreso}}</td>
+          <td>{{item.usuario.nombreUsuario}}</td>
+          <td>
+            <button class="Buttons" (click)="openDialogDetailsProduct(item)">Ver</button>
+            <button class="Buttons2" (click)="openDialogUpdateProduct(item)">Editar</button>
+            <button class="Buttons3" (click)="confirmDelete(item)">Eliminar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+
+</html>
+<!-- <div class="modal" id="newProduct" tabindex="-1" aria-labelledby="newProductLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div>
+          <h5 class="modal-title" id="newProductLabel">Producto</h5>
+        </div>
+        <form action="">
+          <div class="form-group">
+            <label>Codigo</label><br>
+            <input type="text" class="form-control" id="expediente" name="expediente" placeholder="Codigo" required><br>
+            <label>Nombre</label><br>
+            <input type="text" class="form-control" id="producto" name="producto" placeholder="Nombre" required><br>
+            <label>Tipo POS</label><br>
+            <input type="checkbox" id="pos" name="pos" required><br>
+            <label>Formula</label><br>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div> -->

@@ -1,0 +1,57 @@
+/* Estilos para el mat-toolbar */
+.selectUser {
+    width: 800px; /* Ajusta el ancho según tus preferencias */
+    margin: 0 auto; /* Centra la ventana horizontalmente en la pantalla */
+  }
+  mat-toolbar {
+    width: 800px;
+    align-items: center;
+    text-align: center;
+    color: aliceblue;
+    background: hsl(245, 86%, 14%);
+  }
+  
+  /* Estilos para la tabla */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0px;
+  }
+  
+  /* Estilos para las celdas de encabezado */
+  th {
+    background-color: #76777990;
+    color: #000000;
+    font-weight: bold;
+    font-size: 16px; 
+    padding: 8px; 
+    text-align: center;
+    border-bottom: 1px solid #54585d;
+  }
+  
+  /* Estilos para las celdas de datos */
+  td {
+    font-size: 16px; 
+    padding: 8px; 
+    text-align: center;
+    border-bottom: 1px solid #54585d;
+  }
+  
+  /* Estilos para las filas impares */
+  tbody tr:nth-child(odd) {
+    background-color: #f9fafb;
+  }
+  
+  /* Estilos para el botón */
+  .Buttons {
+    background: rgb(17, 154, 10);
+    border-radius: 10px;
+    border: none;
+    color: aliceblue;
+    padding: 10px 22px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 10px;
+    margin: 0px;
+  }
+  
